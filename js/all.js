@@ -130,6 +130,14 @@ function clean_history() {
     localStorage.setItem('stored_data', null);
     whole_data = [];
     record_list.innerHTML = "";
+
+    submit_btn.style.color = 'black';
+    submit_btn.querySelector('.result').textContent = '看結果';
+    submit_btn.querySelector('.result').style.fontSize = '24px';
+    submit_btn.classList.remove('active');
+    document.querySelector('.btn-box .state').textContent = '';
+    submit_btn.querySelector('small').style.display = 'none';
+    restart_btn.style.opacity = 0;
 }
 
 function delete_li(e) {
